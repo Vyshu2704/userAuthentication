@@ -1,0 +1,28 @@
+<div class="form">
+    <form [formGroup]="loginForm" class="my-form" (ngSubmit)="logInfo()">
+        <div>
+            <label >email<input formControlName="email" placeholder="enter email"></label>
+        </div>
+        <div>
+            <label >password<input formControlName="password" placeholder="enter password"></label>
+        </div>
+        <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched"class="text-danger">Password is required</div>
+        <div class="text-danger" *ngIf="loginForm.get('password')?.hasError('containsSpace')">Entervalid Password</div>
+        <div *ngIf="" class="text-danger">Incorrect Password</div>
+  
+        <div>
+            <label >OTP<input formControlName="otp" placeholder="enter OTP"></label>
+        </div>
+        
+        <div class="w-100 d-flex justify-content-end">
+            <a  class="text-success fw-bold"
+                style="text-decoration: underline;cursor: pointer;">Forgot Password?</a>
+        </div>
+        <div class="text-center mt-3">
+            <button class="btn btn-success shadow-none w-100 rounded-pill fw-bold" type="submit"
+                style="background-color:#00733c;"[disabled]="!loginForm.valid">Sign In</button>
+                <!--  -->
+        </div>
+    </form>
+    </div>
+    
