@@ -1,0 +1,17 @@
+<div class="form">
+    <form [formGroup]="loginForm" class="my-form" (ngSubmit)="logInfo()">
+        <div>
+            <label >email<input formControlName="email" placeholder="enter email"></label>
+        </div>
+        <div>
+            <label >otp<input formControlName="otp" placeholder="enter otp"></label>
+        </div>
+        <div class="text-center mt-3">
+            <button class="btn btn-success shadow-none w-100 rounded-pill fw-bold" type="submit"
+                style="background-color:#00733c;"[disabled]="!loginForm.valid">Sign In</button>
+                
+                <!-- <button routerLink="otp-path">OTP</button> -->
+        </div>
+    </form>
+    </div>
+    

@@ -1,0 +1,27 @@
+.my-form{
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 100px;
+
+    .label{
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input,select{
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    button{
+        background-color: green;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+}
+
+

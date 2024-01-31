@@ -20,4 +20,8 @@ export class AdminService {
   getAllUserDetails():Observable<any>{
     return this.http.get(environment.springBootBaseUrl+ApiEndpoint.USERS.GET_ALL_USER_DETAILS)
   }
+
+  getUserDetails(formData:any):Observable<any>{
+    return this.http.post(environment.springBootBaseUrl+ApiEndpoint.LOGIN.GET_ALL_USER_DETAILS,formData)
+  }
 }
